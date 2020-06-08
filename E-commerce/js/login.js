@@ -58,12 +58,28 @@ function login() {
   
   var text;
 
-  if (userEmail === storedEmail && userPassword === storedPassword){
+
+    if(!(userEmail == storedEmail && userPassword == storedPassword)) {
+      text = "Login Details Not A Match";
+      error_msg.innerHTML = text;
+      return false;
+    }
+
     text = "Login Details Matched";
     error_msg.innerHTML = text;
     return true;
-  }
-  text = 'Login Not A Match';
-    error_msg.innerHTML = text;
-    return false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                         
